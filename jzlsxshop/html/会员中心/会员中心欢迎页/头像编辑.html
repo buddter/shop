@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="../../../css/win.css">
+	<style>
+	*{margin: 0;padding:0;}
+	body{
+		overflow: hidden;
+	}
+	#box{
+		width: 300px;
+		height: 300px;
+		background: #FFF;
+		opacity: 0.6;
+		position: absolute;
+		top: 0px;
+		left: 0px;
+	}
+	#f{
+		position: absolute;
+		bottom: 0;right: 0;
+		width: 13px;
+		height: 13px;
+		background: #fff;
+		border:1px solid red;
+		cursor: se-resize;
+	}
+	#main{
+		width: 300px;
+		height: 300px;
+		background: url("../../../images/xiazhiqiu.png") ;
+		background-size: 100%;
+		position: relative;
+	}
+	#middle,#small,#m3,#m4{
+		float: left;
+		position: relative;
+	}
+	#middle{
+		width: 150px;
+		height: 150px;
+		border: 2px solid red;
+		overflow: hidden;
+	}
+	#small{
+		width: 80px;
+		height: 80px;
+		border:2px solid green;
+		overflow: hidden;
+	}
+	#middle img{
+		position: absolute;
+	}
+	#small img{
+		position: absolute;
+	}
+	#m3 img{
+		position: absolute;
+	}
+	#m4 img{
+		position: absolute;
+	}
+	#m3{
+		width: 50px;
+		height: 50px;
+		border:2px solid black;
+		overflow: hidden;
+	}
+	#m4{
+		width: 30px;
+		height: 30px;
+		border:2px solid tan;
+		overflow: hidden;
+	}
+	.span{
+		display: inline-block;
+		font-size: 12px;
+		font-weight: bolder;
+	}
+	button{
+		background:#db1020;
+		border:1px;
+		width: 60px;
+		height: 25px;
+		text-align: center;
+		line-height: 25px;
+	}
+	p span{
+		font-size: 12px;
+		color:#333333;
+		font-weight: normal;
+	}
+	.bc{
+		color: #fff;
+	}
+	.qx{
+		margin-left: 15px;
+		background:#f1f1f1;
+		color: #ababab;
+		border:1px solid #d1d1d1;
+	}
+	.text{
+		width: 100px;
+		height: 150px;
+		position: absolute;
+		top:50px;
+		left: 300px;
+		color: green;
+	}
+	.shut{
+		width: 470px;
+		height: 30px;
+		background:#ce1018;
+		line-height: 30px;
+		position: relative;
+	}
+	.xst-shut{
+		background: #fff;
+		opacity: 0.5;
+		width: 15px;
+		height: 15px;
+		border-radius: 50%;
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		right: 0;
+		margin:auto;
+		margin-right: 7px;
+		line-height: 15px;
+		margin-top: 8px;
+		cursor:pointer;
+		text-align: center;
+	}
+	.shut span{
+		color:#ababab;
+		font-size: 12px;
+	}
+	.shut .span-1{
+		margin-left: 360px;
+	}
+	</style>
+</head>
+<body>
+	<div class="shut">
+		<span>修改头像</span>
+		<span class="span-1">关闭</span>
+		<div class="xst-shut" id="xst-shut">×</div>
+	</div>
+	<p><span class="span">自定义头像</span></p>
+	<p><button>选择图片</button><span>仅支持JPG、JPEG、PNG图片文件，且文件小于1M，建议使用正方形图片</span></p>	
+	<div id="main">
+		<div id="box">
+			<div id="f"></div>
+		</div>
+		<div class="text">您上传的头像会自动生成4种尺寸，请注意小尺寸头像是否清晰。</div>
+	</div>
+
+	<div id="middle"><img src="../../../images/xiazhiqiu.png" height="150" width="150"></div>
+	<div id="small"><img src="../../../images/xiazhiqiu.png" height="80" width="80"></div>
+	<div id="m3"><img src="../../../images/xiazhiqiu.png" height="50" width="50"></div>
+	<div id="m4"><img src="../../../images/xiazhiqiu.png" height="30" width="30"></div>
+	<button class="bc" onclick="shut()">保存</button><button class="qx"onclick="shut();">取消</button>
+	<script>
+	var oMain = document.getElementById("main");
+	var oBox = document.getElementById("box");
+	var oF = document.getElementById('f');
+	var oMiddle = document.getElementById("middle");
+	var oSmall = document.getElementById("small");
+	var m3 = document.getElementById("m3");
+	var m4 = document.getElementById("m4");
+	var oMiddleImg = document.getElementById("middle").getElementsByTagName('img')[0];
+	var oSmallImg = document.getElementById("small").getElementsByTagName("img")[0];
+	var m3 = document.getElementById("m3").getElementsByTagName('img')[0];
+	var m4 = document.getElementById("m4").getElementsByTagName('img')[0];
+	
+	oF.onmousedown = function(){
+		var event = event || window.event;
+		event.stopPropagation();
+		event.cancelBubble = true;
+		var startX = event.clientX;
+		var startY = event.clientY;
+		var w = oBox.offsetWidth;
+		var h = oBox.offsetHeight;
+		document.onmousemove = function() {
+			var event = event || window.event;
+			var endX = event.clientX - startX;
+			var endY = event.clientY - startY;
+			oBox.style.width = endX + w + "px";
+			oBox.style.height = endY + h + "px";
+		}
+	}
+	oF.onmouseup = function(){
+		document.onmousemove = null;
+		var oW = oBox.offsetWidth;
+		var oH = oBox.offsetHeight;
+		var NumL = 300/oW;
+		var NumT = 300/oH;
+		rese(NumL,NumT);
+		rese2(NumL,NumT);
+		rese3(NumL,NumT);
+		rese4(NumL,NumT);
+	}
+	oBox.onmousedown = function () {
+		var event = event || window.event;
+		var startX = event.clientX;
+		var startY = event.clientY;
+		var nw = oBox.offsetWidth/2;
+		var nh = oBox.offsetHeight/2;
+		var MaxWidth = oMain.clientWidth - oBox.offsetWidth;
+		var MaxHeight = oMain.clientHeight - oBox.offsetHeight;
+		var oL = oBox.offsetLeft;
+		var oT = oBox.offsetTop;
+		var NumL1 = oMiddleImg.offsetWidth/oMain.offsetWidth;
+		var NumT1 = oMiddleImg.offsetHeight/oMain.offsetHeight;
+		var NumL2 = oSmallImg.offsetWidth/oMain.offsetWidth;
+		var NumT2 = oSmallImg.offsetHeight/oMain.offsetHeight;
+		var NumL3 = m3.offsetWidth/oMain.offsetWidth;
+		var NumT3 = m3.offsetHeight/oMain.offsetHeight;
+		var NumL4 = m4.offsetWidth/oMain.offsetWidth;
+		var NumT4 = m4.offsetHeight/oMain.offsetHeight;
+		window.onmousemove = function(event){
+			var event = event || window.event;
+			var endX = event.clientX - startX + oL;
+			var endY = event.clientY - startY + oT;
+			if(endX<0){
+				endX = 0;
+			}
+			if(endX>MaxWidth){
+				endX = MaxWidth;
+			}
+			if(endY<0){
+				endY = 0;
+			}
+			if(endY>MaxHeight){
+				endY = MaxHeight;
+			}
+			oBox.style.left = endX  + "px";
+			oBox.style.top = endY  + "px";
+			oMiddleImg.style.left = -(endX*NumL1) + "px";
+			oMiddleImg.style.top = -(endY*NumT1) + "px";
+			oSmallImg.style.left = -(endX*NumL2) + "px";
+			oSmallImg.style.top = -(endY*NumT2) + "px";
+			m3.style.left = -(endX*NumL3) + "px";
+			m3.style.top = -(endY*NumT3) + "px";
+			m4.style.left = -(endX*NumL4) + "px";
+			m4.style.top = -(endY*NumT4) + "px";
+		}
+	}
+	oBox.onmouseup = function(){
+		window.onmousemove = null;
+	}
+	function rese(w,h){
+		oMiddleImg.style.width = 150*w + "px";
+		oMiddleImg.style.height = 150*h + "px" ;
+	}
+	function rese2(w,h){
+		oSmallImg.style.width = 80*w + "px";
+		oSmallImg.style.height = 80*h + "px";
+	}
+	function rese3(w,h){
+		m3.style.width = 50*w + "px";
+		m3.style.height = 50*h + "px";
+	}
+	function rese4(w,h){
+		m4.style.width = 30*w + "px";
+		m4.style.height = 30*h + "px";
+
+	}
+	var xstShut = document.getElementById("xst-shut");
+	var sw = window.parent.document.getElementById("test");
+	var by = window.parent.document.getElementsByTagName("body")[0];
+	xstShut.onclick = function (){
+		shut();
+	}
+	
+	 function shut(){
+		sw.style.display="none";
+		by.style.overflow="auto";
+	}
+	</script>
+</body>
+</html>

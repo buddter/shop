@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title> 会员中心</title>
+	<link rel="stylesheet" href="../">
+	<style>
+		body{
+			background: #fff;
+		}
+		.xst-head{
+			width: 100%;
+			height:258px;
+		}
+		.xst-body{
+			width: 100%;
+			height:800px;
+			margin-top: 10px;
+			margin-left: -7px;
+		}
+		.xst-footf{
+			width: 100%;
+			height: 410px;
+		
+		}
+		.div-b{
+			width: 1200px;
+			margin:auto;
+		}
+		.test{
+			width: 100%;
+			height: 100%;
+			background: rgba(100,100,100,0.5);
+			display: none;
+			position:fixed;
+			z-index: 2;
+			top:0;
+			left: 0;
+		}
+		.test iframe{
+			width: 470px;
+			height: 530px;
+			overflow: hidden;
+			position: fixed;
+			top: 0;
+			left: 0;
+			bottom: 0;
+			right: 0;
+			margin:auto;
+			background: #fff;
+
+		}
+		.zhangyanfa{
+			width: 73px;
+			height:14px;
+			background: red;
+			position: absolute;
+			z-index: 3;
+			top:370px;
+			left:166px;
+			opacity: 0;
+		}
+	</style>
+</head>
+<body>
+	<div>
+		<iframe class="xst-head" src="分页/搜索logo.html" frameborder="0" scrolling="no"></iframe>
+	</div>
+	<div class="div-b" id="divb">
+		<iframe class="xst-body" frameborder="0" src="分页/vip.html" name="show"></iframe>
+	</div>
+	<div>
+		<iframe class="xst-footf" src="分页/版权商标.html" frameborder="0"></iframe>
+	</div>
+	<div class="test" id="test">
+		<iframe src="会员中心/会员中心欢迎页/头像编辑.html" frameborder="0"></iframe>
+	</div>
+	<div class="zhangyanfa" id="zhangyanfa"></div>
+	<script>
+		var oDiv = document.getElementById("zhangyanfa");
+		var oT = document.getElementById("test");
+
+		oDiv.onclick = function(){
+			oT.style.display="block";
+			document.body.style.overflow="hidden";
+		}
+	</script>
+</body>
+</html>

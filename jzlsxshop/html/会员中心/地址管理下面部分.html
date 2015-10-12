@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>地质管理</title>
+	<link rel="stylesheet" href="../../css/win.css">
+	<style>
+		.syd_ef{
+			width: 100%;
+			height: 100%;
+			background: rgba(100,100,100,0.5);
+			display: none;
+			position: fixed;
+			z-index: 2;
+			top:0;
+			left: 0;
+		}
+		.syd_ef iframe{
+			width: 583px;
+			height: 400px;
+			position: fixed;
+			top:0;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			margin: auto;
+			background: #fff;
+			z-index: 1;
+		}
+		.sydshut{
+			width: 583px;
+			height: 400px;
+			background: red;
+			position: fixed;
+			top:0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			margin:auto;
+			z-index: -1;
+		}
+		.sydshut .shut{
+			width: 20px;
+			height: 20px;
+			background: yellow;
+			position: relative;
+			top: 0;
+			left: 563px;
+			border-radius: 50%;
+			text-align: center;
+			line-height: 20px;
+			cursor: pointer;
+			z-index: 3;
+		}
+	</style>
+</head>
+<body>
+	<div class="syd_e">
+		<div class="syd_e1 clear">
+			<p>地址管理</p>
+			<div  class="syd_e11">
+				<input type="button" id="syd_button" value="新增收货地址">
+			</div>
+		</div>
+		<div class="syd_e2 clear">
+			<div class="syd_e21"></div>
+			<div class="syd_e24">1</div>
+			<div class="syd_e22">
+				<span class="syd_e221">董女士</span>&nbsp;<span>收</span><br>
+				<span class="syd_e221">北京&nbsp;北京市&nbsp;朝阳区&nbsp;</span>
+				<span>朝阳区慈云寺住邦两千B座203</span>
+				<span class="syd_e221">15510232497</span>
+			</div>
+			<div class="syd_e23">
+				<span class="syd_e231">编辑</span><br>
+				<span>已设为常用地址</span><br>
+				<span class="syd_e231">删除</span>
+			</div>
+		</div>
+		<div class="syd_e2  syd_e3 clear">
+			<div class="syd_e21"></div>
+			<div class="syd_e24">2</div>
+			<div class="syd_e22">
+				<span class="syd_e221">董女士</span>&nbsp;<span>收</span><br>
+				<span class="syd_e221">北京&nbsp;北京市&nbsp;朝阳区&nbsp;</span>
+				<span>朝阳区慈云寺住邦两千B座203</span>
+				<span class="syd_e221">15510232497</span>
+			</div>
+			<div class="syd_e23">
+				<span class="syd_e231">编辑</span><br>
+				<span>已设为常用地址</span><br>
+				<span class="syd_e231">删除</span>
+			</div>
+		</div>
+		<div class="syd_d5 syd_e51">
+			<div class="syd_d51 clear">
+				<input type="button" value="上一页">
+				<span class="syd_d511">1</span>
+				<input type="button" value="上一页">
+				<span>共1页</span>
+				<span>到第</span>
+				<div class="syd_d512">1</div>
+				<span>页</span>
+				<input type="button" value="确定">
+			</div>
+		</div>
+	</div>
+	<div class="syd_ef" id="syd_ef">
+		<div class="sydshut" id="sydshut">
+			<div class="shut" id="shut">X</div>
+		</div>
+		<iframe src="地址管理.html" frameborder="0"></iframe>
+	</div>
+	<script>
+	var oSydButton = document.getElementById("syd_button");
+	var oDivsSyd = document.getElementById("syd_ef");
+	oSydButton.onclick = function(){
+		oDivsSyd.style.display="block";
+	}
+	</script>
+</body>
+</html>

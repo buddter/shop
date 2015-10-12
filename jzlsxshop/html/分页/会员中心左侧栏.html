@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="../../css/win.css">
+</head>
+<body style="margin-left:7px;">
+	<div class="syd_main">
+		<div class="syd_l">
+			<div class="syd_l1">
+				<div class="syd_limg11"><div class="sanjiao"></div><img src="../../images/User.png" height="20" width="24" alt="">会员中心</div>
+				<div class="syd_l12" id="tes"><div class="syd_l12h"></div>
+	<div class="syd_l12t"><p>夏知秋</p><p>设置个人头像</p></div></div>
+				<div class="syd_l13 clear">
+					<div class="syd_l131"></div>
+					<p  class="syd_l132">交易中心</p>
+				</div>
+			</div>
+			<div class="syd_l2">
+				<div class="syd_l21">
+					<ul>
+						<li><a href="../会员中心/我的订单.html"target="message">我的订单</a></li>
+						<li><a href="../商品列表页.html" target="_blank">我的团购</a></li>
+						<li><a href="../会员中心/我的收藏.html" target="message">我的收藏</a></li>
+						<li><a href="../会员中心/账户余额/账户余额1.html"target="message">账户余额</a></li>
+						<li><a href="../会员中心/优惠券/优惠券.html"target="message">我的优惠券</a></li>
+						<li><a href="../会员中心/积分/积分.html"target="message">我的积分</a></li>
+						<li><a href="../会员中心/浏览历史.html" target="message">浏览历史</a></li>
+					</ul>
+				</div>
+				<div class="syd_l21 clear">
+					<div class="syd_l23"></div>
+					<p  class="syd_l24">服务中心</p>
+				</div>
+			</div>
+			<div class="syd_l3">
+				<div class="syd_l21">
+					<ul>
+						<li><a href="../会员中心/服务保障.html"target="message">服务保障</a></li>
+						<li class="syd_l32"><a href="../会员中心/帮助中心.html"target="message" >帮助中心</a></li>
+					</ul>
+				</div>
+				<div class="syd_l33 clear">
+					<div class="syd_l34"></div>
+					<p class="syd_l35"><a href="../会员中心/会员中心欢迎页/会员中心.html"target="message">会员中心</a></p>
+				</div>
+			</div>
+			<div class="syd_l4">
+					<ul>
+						<li><a href="../会员中心/个人信息1.html"target="message">个人信息</a></li>
+						<li ><a href="../会员中心/地址管理下面部分.html" target="message" >地址管理</a></li>
+						<li><a href="../会员中心/账户安全.html"target="message">账户安全</a></li>
+						<li ><a href="" >会员卡绑定</a></li>
+					</ul>
+			</div>
+		</div>
+	</div>
+	</div>
+	<script>
+		tes.onclick = function(){
+			var s=window.parent.document.getElementById("test")
+			console.log(s);
+		}
+		var oA = document.getElementsByTagName("a");
+		for(var j = 0;j<oA.length;j++){
+			(function(j){
+				oA[j].onclick=function(){
+				for(var i = 0;i<oA.length;i++){
+					oA[i].style.fontWeight="normal";
+					oA[i].style.color="#000";
+					}
+					oA[j].style.fontWeight="bolder";
+					oA[j].style.color="#ce1018";	
+				}
+
+			})(j);
+		}
+		
+	</script>	
+</body>
+</html>

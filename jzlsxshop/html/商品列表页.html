@@ -1,0 +1,777 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>商品列表</title>
+	<link rel="stylesheet" href="../css/lyh-css.css">
+	<link rel="stylesheet" href="../css/win.css">
+
+	<style>
+		.lyh_div{
+			position:fixed;
+			top: 0;
+			left: 0;
+			background: rgba(128,0,128,0.5);
+			width: 100%;
+			height: 100%;
+			display: none;
+		}
+		.lyh_if{
+			position: fixed;
+			top:0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			margin: auto;
+			width: 500px;
+			height: 230px;
+		}
+	</style>
+
+</head>
+<body id="body">
+	<div class="xst-logo">
+			<div class="z">
+			<ul class="xst-top-left">
+				<li><img src="../images/phone.jpg" height="12" width="8" alt="手机">手机版</li>
+				<li class="t"><div class="triangle"></div></li>
+				<li>|</li>
+				<li>HI,欢迎来红华西市！</li>
+				<li><a href="登录.html"target="_blank">请登录</a></li>
+				<li><a href="注册/注册.html"target="_blank">免费注册</a></li>
+			</ul>
+			<ul class="xst-top-right">
+				<li><a href="会员中心主页.html" target="_blank">我的订单</a></li>
+				<li>|</li>
+				<li>我的西市</li>
+				<li class="t"><div class="triangle"></div></li>
+				<li>|</li>
+				<li><img src="../images/shopping.jpg" height="11" width="12" alt="购物车">购物车0件</li>
+				<li>|</li>
+				<li>服务中心</li>
+				<li class="t"><div class="triangle"></div></li>
+				<li>|</li>
+				<li><img src="../images/list.jpg" height="10" width="10" alt="网址导航">网址导航</li>
+				<li class="t"><div class="triangle"></li>
+			</ul>
+	</div>
+	</div>
+	<div class="xst-ad">
+		<div class="xst-shut">×</div>
+	</div>
+	<div class="xst-search">
+		<div class="xst-search-l">LOGO</div>
+		<div class="xst-search-s">
+			<div class="xst-form-div">
+				<form action="" id="xst-form" class="xst-form">
+					<input type="text" value="关键词" class="xst-form-t" id="xst-form-t"><input type="button" value="搜索" class="xst-form-b" id="xst-form-b">
+				</form>
+			</div>
+			<ul class="xst-hotsearch">
+				<li>热门搜索：连衣裙</li>
+				<li>|</li>
+				<li>冰箱</li>
+				<li>|</li>
+				<li class="red">小米</li>
+				<li>|</li>
+				<li>护肤套装</li>
+				<li>|</li>
+				<li>沙发</li>
+				<li>|</li>
+				<li>男士短裤</li>
+				<li>|</li>
+				<li class="red">空调</li>
+			</ul>
+		</div>
+		<div class="xst-search-t"><p class="t1">客户服务热线</p><p class="ft-red">400-88888888</p></div>
+	</div>
+	<div class="lyh-all">
+		<div class="lyh-nav">
+			<div class="lyh-nav_head"class="clear">
+				<div class="lyh-nav_head1">
+				商品服务分类
+					<img src="../images/list_03.jpg" alt="">
+				</div>
+				<div class="lyh-nav_head2" id="lyh-nav-head2">
+					<span class="lyh-nav_head22"style="color: rgb(196,0,0)">商城首页</span>
+					<span class="lyh-nav_head22">家具馆</span>
+					<span class="lyh-nav_head22">电器城</span>
+					<span class="lyh-nav_head22">超市</span>
+					<span class="lyh-nav_head22">特卖活动</span>
+					<span class="lyh-nav_head22">预定抢购</span>
+				</div>
+			</div>
+			<div class="lyh-nav_cent">
+			<div class="lyh-nav_cent10">	
+				<ul class="lyh-nav_cent1" id="lyh-nav_cent1">
+				<li class="lyh-nav_cent11" style="background-color: rgb(196,0,0)">
+					<div class="lyh-nav_cent12"></div>家用电器<img src="../images/left1.png" alt="" class="lyh-nav_cent_left1" style="display:block">
+				</li>
+				<li class="lyh-nav_cent11">
+					<div class="lyh-nav_cent13"></div>服装/鞋帽/箱包<img src="../images/left1.png" alt="" class="lyh-nav_cent_left1">
+				</li>
+				<li class="lyh-nav_cent11">
+					<div class="lyh-nav_cent14"></div>家居百货<img src="../images/left1.png" alt="" class="lyh-nav_cent_left1">
+				</li>
+				<li class="lyh-nav_cent11">
+					<div class="lyh-nav_cent15"></div>手机数码/电脑办公<img src="../images/left1.png" alt="" class="lyh-nav_cent_left1">
+				</li>
+				<li class="lyh-nav_cent11">
+					<div class="lyh-nav_cent16"></div>母婴/玩具<img src="../images/left1.png" alt="" class="lyh-nav_cent_left1">
+				</li>
+				<li class="lyh-nav_cent11">
+					<div class="lyh-nav_cent17"></div>家具/建材/家装<img src="../images/left1.png" alt="" class="lyh-nav_cent_left1">
+				</li>
+				<li class="lyh-nav_cent11">
+					<div class="lyh-nav_cent18"></div>酒类/茶叶<img src="../images/left1.png" alt="" class="lyh-nav_cent_left1">
+				</li>
+				<li class="lyh-nav_cent11">
+					<div class="lyh-nav_cent19"></div>食品饮料<img src="../images/left1.png" alt="" class="lyh-nav_cent_left1">
+				</li>
+				<li class="lyh-nav_cent11">
+					<div class="lyh-nav_cent110"></div>钟表/首饰/眼镜<img src="../images/left1.png" alt="" class="lyh-nav_cent_left1">
+				</li>
+				<li class="lyh-nav_cent11">
+					<div class="lyh-nav_cent111"></div>化妆品/个人护理<img src="../images/left1.png" alt="" class="lyh-nav_cent_left1">
+				</li>
+				<li class="lyh-nav_cent11">
+					<div class="lyh-nav_cent112"></div>汽车用品<img src="../images/left1.png" alt="" class="lyh-nav_cent_left1">
+				</li>
+				<li class="lyh-nav_cent11">
+					<div class="lyh-nav_cent113"></div>运动户外/营养保健<img src="../images/left1.png" alt="" class="lyh-nav_cent_left1">
+				</li>
+				<li class="lyh-nav_cent11">
+					<div class="lyh-nav_cent114"></div>花鸟/图书<img src="../images/left1.png" alt="" class="lyh-nav_cent_left1">
+				</li>
+				<li class="lyh-nav_cent11">
+					<div class="lyh-nav_cent115"></div>生活服务<img src="../images/left1.png" alt="" class="lyh-nav_cent_left1">
+				</li>
+			</ul>
+			<div class="lyh-nav_cent_more" >
+				<ul class="lyh-nav_cent_more1">
+					<li class="lyh-nav_cent_more11"class="claer">
+						<div class="lyh-nav_cent_more11_All">大家电</div>
+						<div class="lyh-nav_cent_more11_Cnt">
+							<a style="color:rgb(196,0,0)">空调</a>
+							<a>冰箱</a>
+							<a>洗衣机</a>
+							<a>电视</a>
+							<a>厨房电器</a>
+						</div>						
+					</li>
+					<li class="lyh-nav_cent_more11"class="claer">
+						<div class="lyh-nav_cent_more11_All">家庭音响</div>
+						<div class="lyh-nav_cent_more11_Cnt">
+							<a>家庭影院</a>
+							<a>组合音响</a>
+							<a>音箱</a>
+							<a>DVD</a>	
+						</div>					
+					</li>
+					<li class="lyh-nav_cent_more11"class="claer">
+						<div class="lyh-nav_cent_more11_All">生活家电</div>
+						<div class="lyh-nav_cent_more11_Cnt">
+							<a>吸尘器</a>
+							<a>加湿器</a>
+							<a style="color:rgb(196,0,0)">净化器</a>
+							<a>电风扇</a>
+							<a>电暖气</a>
+							<a>电话机</a>
+							<a>电熨斗</a>
+							<a>净水器</a>
+						</div>						
+					</li>
+					<li class="lyh-nav_cent_more11"class="claer">
+						<div class="lyh-nav_cent_more11_All">厨房家电</div>
+						<div class="lyh-nav_cent_more11_Cnt">
+							<a>电饭煲</a>
+							<a>电磁炉</a>
+							<a>豆浆机</a>
+							<a style="color:rgb(196,0,0)">榨汁机</a>
+							<a>电水壶</a>
+							<a>电烤箱</a>
+							<a>电蒸锅</a>
+							<a>电压力锅</a>
+							<a>面包机</a>
+						</div>						
+					</li>
+					<li class="lyh-nav_cent_more11"class="claer">
+						<div class="lyh-nav_cent_more11_All">美容健康</div>
+						<div class="lyh-nav_cent_more11_Cnt">
+							<a>剃须刀</a>
+							<a>剃/脱毛器</a>
+							<a>美容设备</a>
+							<a>美发设备</a>
+							<a>电吹风</a>
+							<a>血压仪</a>
+							<a>按摩器</a>
+							<a>电动牙刷</a>
+						</div>						
+					</li>
+				</ul>
+			</div>
+			<img src="../images/4211.png" alt="" class="lyh-4211"></div>	
+			</div>
+		</div>
+		<div class="lyh-lb-C" class="clear">
+			<div class="lyh-lb-C_L">
+				<span  class="lyh-lb-C_L_1">相关商品</span>
+				<div  class="lyh-lb-C_L_sx"></div>
+				<img src="../images/lyh-splb-1.jpg" alt="">
+				<span  class="lyh-lb-C_L_2">上好佳荷兰豆(袋装55g)</span>
+				<div  class="lyh-lb-C_L_xx"></div>
+				<img src="../images/lyh-splb-2.jpg" alt="">
+				<span  class="lyh-lb-C_L_2">果园老农九制话梅(袋装100g) <span style="margin-top:13px;">¥7.10</span></span>
+				<div  class="lyh-lb-C_L_xx"></div>
+				<img src="../images/lyh-splb-3.jpg" alt="">
+				<span  class="lyh-lb-C_L_2">【我买网尾品】可口可乐昵称瓶(瓶装500m..<span>¥2.40</span></span>
+				<div  class="lyh-lb-C_L_xx"></div>
+				<img src="../images/lyh-splb-4.jpg" alt="">
+				<span  class="lyh-lb-C_L_2">DESLON德世朗LY-TZ011-5莱茵至尊五"悦"<span>¥1268.00</span></span>
+				<div  class="lyh-lb-C_L_xx"></div>
+				<img src="../images/lyh-splb-5.jpg" alt="">
+				<span  class="lyh-lb-C_L_2">蓝色经典140克维达卫生纸   ( 提装   10    卷)<span>¥19.80</span></span>
+				<div  class="lyh-lb-C_L_xx"></div>
+				<span  class="lyh-lb-C_L_1">最近看过</span>
+				<div  class="lyh-lb-C_L_sx"></div>
+				<img src="../images/lyh-splb-1.jpg" alt="">
+				<span  class="lyh-lb-C_L_2">上好佳荷兰豆(袋装55g)</span>
+				<div  class="lyh-lb-C_L_xx"></div>
+				<img src="../images/lyh-splb-2.jpg" alt="">
+				<span  class="lyh-lb-C_L_2">果园老农九制话梅(袋装100g) <span style="margin-top:13px;">¥7.10</span></span>
+				<div  class="lyh-lb-C_L_xx"></div>
+				<img src="../images/lyh-splb-3.jpg" alt="">
+				<span  class="lyh-lb-C_L_2">【我买网尾品】可口可乐昵称瓶(瓶装500m..<span>¥2.40</span></span>
+				<div  class="lyh-lb-C_L_xx"></div>
+				<img src="../images/lyh-splb-4.jpg" alt="">
+				<span  class="lyh-lb-C_L_2">DESLON德世朗LY-TZ011-5莱茵至尊五"悦"<span>¥1268.00</span></span>
+				<div  class="lyh-lb-C_L_xx"></div>
+				<img src="../images/lyh-splb-5.jpg" alt="">
+				<span  class="lyh-lb-C_L_2">蓝色经典140克维达卫生纸   ( 提装   10    卷)<span>¥19.80</span></span>
+				<div  class="lyh-lb-C_L_xx"></div>
+			</div>
+			<div class="lyh-lb-C_R">
+				<div class="lyh-lb-C_R_1">
+					<div class="lyh-lb-C_R_1_t">
+						<span class="lyh-lb-C_R_1_t_1">首页</span>
+						<span class="lyh-lb-C_R_1_t_1">></span>
+						<span class="lyh-lb-C_R_1_t_1">食品饮料</span>
+						<span class="lyh-lb-C_R_1_t_1">></span>
+						<span style="color:rgb(196,0,0)" class="lyh-lb-C_R_1_t_1">蜂蜜柚子茶</span>
+						<div class="lyh-lb-C_R_1_t_2"></div>
+						<span class="lyh-lb-C_R_1_t_3">蜂蜜/柚子茶-商品筛选</span>
+						<div class="lyh-lb-C_R_1_t_4" class="clear">
+							<div class="lyh-lb-C_R_1_t_4_1">品牌</div>
+							<div class="lyh-lb-C_R_1_t_4_2">
+								<div class="lyh-lb-C_R_1_t_4_2_a"><img src="../images/lyh-splb-6.jpg" alt="">不限</div>
+								<div class="lyh-lb-C_R_1_t_4_2_a"><img src="../images/lyh-splb-7.jpg" alt="">恩济堂</div>
+								<div class="lyh-lb-C_R_1_t_4_2_a"><img src="../images/lyh-splb-7.jpg" alt="">山萃</div>
+								<div class="lyh-lb-C_R_1_t_4_2_a"><img src="../images/lyh-splb-7.jpg" alt="">杜蜂王</div>
+								<div class="lyh-lb-C_R_1_t_4_2_a"><img src="../images/lyh-splb-7.jpg" alt="">百花</div>
+								<div class="lyh-lb-C_R_1_t_4_2_a"><img src="../images/lyh-splb-7.jpg" alt="">蜜仔屋</div>
+								<div class="lyh-lb-C_R_1_t_4_2_a"><img src="../images/lyh-splb-7.jpg" alt="">江山</div>
+								<div class="lyh-lb-C_R_1_t_4_2_a"><img src="../images/lyh-splb-7.jpg" alt="">新西兰十一坊</div>
+								<div class="lyh-lb-C_R_1_t_4_2_a"><img src="../images/lyh-splb-7.jpg" alt="">贝斯马</div>
+								<div class="lyh-lb-C_R_1_t_4_2_a"><img src="../images/lyh-splb-7.jpg" alt="">冠生园</div>
+								<div class="lyh-lb-C_R_1_t_4_2_a"><img src="../images/lyh-splb-7.jpg" alt="">塔斯马尼亚</div>
+								<div class="lyh-lb-C_R_1_t_4_2_a"><img src="../images/lyh-splb-7.jpg" alt="">越野拍</div>
+								<div class="lyh-lb-C_R_1_t_4_2_a"><img src="../images/lyh-splb-7.jpg" alt="">荒原</div>
+								<div class="lyh-lb-C_R_1_t_4_2_a"><img src="../images/lyh-splb-7.jpg" alt="">长岁牌</div>
+								<div class="lyh-lb-C_R_1_t_4_2_a"><img src="../images/lyh-splb-7.jpg" alt="">格林农业</div>
+								<div class="lyh-lb-C_R_1_t_4_2_a"><img src="../images/lyh-splb-7.jpg" alt="">蜜蜂哥哥</div>
+								<div class="lyh-lb-C_R_1_t_4_2_a"><img src="../images/lyh-splb-7.jpg" alt="">必美</div>
+								<div class="lyh-lb-C_R_1_t_4_2_a"><img src="../images/lyh-splb-7.jpg" alt="">同仁堂</div>
+								<div class="lyh-lb-C_R_1_t_4_2_a"><img src="../images/lyh-splb-7.jpg" alt="">于向斋</div>
+								<div class="lyh-lb-C_R_1_t_4_2_a"><img src="../images/lyh-splb-7.jpg" alt="">香格里拉</div>
+								<div class="lyh-lb-C_R_1_t_4_2_a"><img src="../images/lyh-splb-7.jpg" alt="">慈蜂园</div>
+							</div>
+							<div class="lyh-lb-C_R_1_t_4_3">
+								<img src="../images/lyh-splb-8.jpg" alt="">展开
+							</div>
+							<div class="lyh-lb-C_R_1_t_4_4"></div>
+						</div>
+						<div class="lyh-lb-C_R_1_t_5">
+							<span class="lyh-lb-C_R_1_t_5_1">加价购</span><span class="lyh-lb-C_R_1_t_5_2">全场常温订单满1元可参加加价购，在购物车中挑选，数量有限，购完为止！</span>
+						</div>
+						<div class="lyh-lb-C_R_1_t_6">
+							<div class="lyh-lb-C_R_1_t_6_1">
+								<span class="lyh-lb-C_R_1_t_6_1_1">排序：</span>
+								<span class="lyh-lb-C_R_1_t_6_1_2" style="background-color:rgb(206,14,26)">默认</span>
+								<span class="lyh-lb-C_R_1_t_6_1_2">销量</span>
+								<span class="lyh-lb-C_R_1_t_6_1_2">价格</span>
+								<span class="lyh-lb-C_R_1_t_6_1_2">评论数</span>
+								<span class="lyh-lb-C_R_1_t_6_1_2">上架时间</span>
+								<span class="lyh-lb-C_R_1_t_6_1_3">共<span style="color:rgb(206,14,26)">223</span>个商品</span>
+							</div>
+							<div class="lyh-lb-C_R_1_t_4_4"></div>
+							<div class="lyh-lb-C_R_1_t_6_3">
+								<span class="lyh-lb-C_R_1_t_6_1_1">筛选：</span>
+								<input type="checkbox"><span class="lyh-lb-C_R_1_t_6_3_1">仅显示促销</span>
+								<input type="checkbox"><span class="lyh-lb-C_R_1_t_6_3_1">仅显示有货</span>
+								<input type="radio"name="a"><span class="lyh-lb-C_R_1_t_6_3_1">全部商品</span>
+								<input type="radio"name="a"><span class="lyh-lb-C_R_1_t_6_3_1">仅显示自营商品</span>
+								<input type="radio"name="a"><span class="lyh-lb-C_R_1_t_6_3_1">仅显示产地直送</span>
+								<span class="lyh-lb-C_R_1_t_6_3_2">共有192875款商品丨1/45</span>
+								<span class="lyh-lb-C_R_1_t_6_3_3"><</span><span class="lyh-lb-C_R_1_t_6_3_3">></span>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="lyh-lb-C_R_2"   class="clear">
+					<div class="lyh-lb-C_R_2_1">
+						<button onclick="logzt()" style="background:white;border:none;"><div class="lyh-lb-C_R_2_1_1"></div></button>
+						<p class="lyh-lb-C_R_2_1_2">金龙鱼盘锦大米10kg</p>
+						<p class="lyh-lb-C_R_2_1_3">东梁特供</p>
+						<p class="lyh-lb-C_R_2_1_4"><span class="lyh-lb-C_R_2_1_5">¥3,800</span> /袋 <span class="lyh-lb-C_R_2_1_6">¥52,00</span></p>
+						<div class="lyh-lb-C_R_2_1_7" class="clear">
+							<input type="text" class="lyh-lb-C_R_2_1_7_1" value="1">
+							<div class="lyh-lb-C_R_2_1_7_2">
+								<div class="lyh-lb-C_R_2_1_7_2_1"></div>
+								<div class="lyh-lb-C_R_2_1_7_2_2"></div>
+							</div>
+							<div class="lyh-lb-C_R_2_1_7_3">
+								<div class="lyh-lb-C_R_2_1_7_3_L">
+									<div class="lyh-lb-C_R_2_1_7_3_R">加入购物车</div>
+								</div>
+							</div>
+							<div class="lyh-lb-C_R_2_1_7_4">
+								<div class="lyh-lb-C_R_2_1_7_4_L">
+									<div class="lyh-lb-C_R_2_1_7_4_R">收藏</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="lyh-lb-C_R_2_1">
+						<div class="lyh-lb-C_R_2_1_1_2"></div>
+						<p class="lyh-lb-C_R_2_1_2">金龙鱼盘锦大米10kg</p>
+						<p class="lyh-lb-C_R_2_1_3">东梁特供</p>
+						<p class="lyh-lb-C_R_2_1_4"><span class="lyh-lb-C_R_2_1_5">¥3,800</span> /袋 <span class="lyh-lb-C_R_2_1_6">¥52,00</span></p>
+						<div class="lyh-lb-C_R_2_1_7" class="clear">
+							<input type="text" class="lyh-lb-C_R_2_1_7_1" value="1">
+							<div class="lyh-lb-C_R_2_1_7_2">
+								<div class="lyh-lb-C_R_2_1_7_2_1"></div>
+								<div class="lyh-lb-C_R_2_1_7_2_2"></div>
+							</div>
+							<div class="lyh-lb-C_R_2_1_7_3">
+								<div class="lyh-lb-C_R_2_1_7_3_L">
+									<div class="lyh-lb-C_R_2_1_7_3_R">加入购物车</div>
+								</div>
+							</div>
+							<div class="lyh-lb-C_R_2_1_7_4">
+								<div class="lyh-lb-C_R_2_1_7_4_L">
+									<div class="lyh-lb-C_R_2_1_7_4_R">收藏</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="lyh-lb-C_R_2_1">
+						<div class="lyh-lb-C_R_2_1_1_3"></div>
+						<p class="lyh-lb-C_R_2_1_2">金龙鱼盘锦大米10kg</p>
+						<p class="lyh-lb-C_R_2_1_3">东梁特供</p>
+						<p class="lyh-lb-C_R_2_1_4"><span class="lyh-lb-C_R_2_1_5">¥3,800</span> /袋 <span class="lyh-lb-C_R_2_1_6">¥52,00</span></p>
+						<div class="lyh-lb-C_R_2_1_7" class="clear">
+							<input type="text" class="lyh-lb-C_R_2_1_7_1" value="1">
+							<div class="lyh-lb-C_R_2_1_7_2">
+								<div class="lyh-lb-C_R_2_1_7_2_1"></div>
+								<div class="lyh-lb-C_R_2_1_7_2_2"></div>
+							</div>
+							<div class="lyh-lb-C_R_2_1_7_3">
+								<div class="lyh-lb-C_R_2_1_7_3_L">
+									<div class="lyh-lb-C_R_2_1_7_3_R">加入购物车</div>
+								</div>
+							</div>
+							<div class="lyh-lb-C_R_2_1_7_4">
+								<div class="lyh-lb-C_R_2_1_7_4_L">
+									<div class="lyh-lb-C_R_2_1_7_4_R">收藏</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="lyh-lb-C_R_2_1">
+						<div class="lyh-lb-C_R_2_1_1_4"></div>
+						<p class="lyh-lb-C_R_2_1_2">金龙鱼盘锦大米10kg</p>
+						<p class="lyh-lb-C_R_2_1_3">东梁特供</p>
+						<p class="lyh-lb-C_R_2_1_4"><span class="lyh-lb-C_R_2_1_5">¥3,800</span> /袋 <span class="lyh-lb-C_R_2_1_6">¥52,00</span></p>
+						<div class="lyh-lb-C_R_2_1_7" class="clear">
+							<input type="text" class="lyh-lb-C_R_2_1_7_1" value="1">
+							<div class="lyh-lb-C_R_2_1_7_2">
+								<div class="lyh-lb-C_R_2_1_7_2_1"></div>
+								<div class="lyh-lb-C_R_2_1_7_2_2"></div>
+							</div>
+							<div class="lyh-lb-C_R_2_1_7_3">
+								<div class="lyh-lb-C_R_2_1_7_3_L">
+									<div class="lyh-lb-C_R_2_1_7_3_R">加入购物车</div>
+								</div>
+							</div>
+							<div class="lyh-lb-C_R_2_1_7_4">
+								<div class="lyh-lb-C_R_2_1_7_4_L">
+									<div class="lyh-lb-C_R_2_1_7_4_R">收藏</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="lyh-lb-C_R_2_1">
+						<div class="lyh-lb-C_R_2_1_1"></div>
+						<p class="lyh-lb-C_R_2_1_2">金龙鱼盘锦大米10kg</p>
+						<p class="lyh-lb-C_R_2_1_3">东梁特供</p>
+						<p class="lyh-lb-C_R_2_1_4"><span class="lyh-lb-C_R_2_1_5">¥3,800</span> /袋 <span class="lyh-lb-C_R_2_1_6">¥52,00</span></p>
+						<div class="lyh-lb-C_R_2_1_7" class="clear">
+							<input type="text" class="lyh-lb-C_R_2_1_7_1" value="1">
+							<div class="lyh-lb-C_R_2_1_7_2">
+								<div class="lyh-lb-C_R_2_1_7_2_1"></div>
+								<div class="lyh-lb-C_R_2_1_7_2_2"></div>
+							</div>
+							<div class="lyh-lb-C_R_2_1_7_3">
+								<div class="lyh-lb-C_R_2_1_7_3_L">
+									<div class="lyh-lb-C_R_2_1_7_3_R">加入购物车</div>
+								</div>
+							</div>
+							<div class="lyh-lb-C_R_2_1_7_4">
+								<div class="lyh-lb-C_R_2_1_7_4_L">
+									<div class="lyh-lb-C_R_2_1_7_4_R">收藏</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="lyh-lb-C_R_2_1">
+						<div class="lyh-lb-C_R_2_1_1_2"></div>
+						<p class="lyh-lb-C_R_2_1_2">金龙鱼盘锦大米10kg</p>
+						<p class="lyh-lb-C_R_2_1_3">东梁特供</p>
+						<p class="lyh-lb-C_R_2_1_4"><span class="lyh-lb-C_R_2_1_5">¥3,800</span> /袋 <span class="lyh-lb-C_R_2_1_6">¥52,00</span></p>
+						<div class="lyh-lb-C_R_2_1_7" class="clear">
+							<input type="text" class="lyh-lb-C_R_2_1_7_1" value="1">
+							<div class="lyh-lb-C_R_2_1_7_2">
+								<div class="lyh-lb-C_R_2_1_7_2_1"></div>
+								<div class="lyh-lb-C_R_2_1_7_2_2"></div>
+							</div>
+							<div class="lyh-lb-C_R_2_1_7_3">
+								<div class="lyh-lb-C_R_2_1_7_3_L">
+									<div class="lyh-lb-C_R_2_1_7_3_R">加入购物车</div>
+								</div>
+							</div>
+							<div class="lyh-lb-C_R_2_1_7_4">
+								<div class="lyh-lb-C_R_2_1_7_4_L">
+									<div class="lyh-lb-C_R_2_1_7_4_R">收藏</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="lyh-lb-C_R_2_1">
+						<div class="lyh-lb-C_R_2_1_1_3"></div>
+						<p class="lyh-lb-C_R_2_1_2">金龙鱼盘锦大米10kg</p>
+						<p class="lyh-lb-C_R_2_1_3">东梁特供</p>
+						<p class="lyh-lb-C_R_2_1_4"><span class="lyh-lb-C_R_2_1_5">¥3,800</span> /袋 <span class="lyh-lb-C_R_2_1_6">¥52,00</span></p>
+						<div class="lyh-lb-C_R_2_1_7" class="clear">
+							<input type="text" class="lyh-lb-C_R_2_1_7_1" value="1">
+							<div class="lyh-lb-C_R_2_1_7_2">
+								<div class="lyh-lb-C_R_2_1_7_2_1"></div>
+								<div class="lyh-lb-C_R_2_1_7_2_2"></div>
+							</div>
+							<div class="lyh-lb-C_R_2_1_7_3">
+								<div class="lyh-lb-C_R_2_1_7_3_L">
+									<div class="lyh-lb-C_R_2_1_7_3_R">加入购物车</div>
+								</div>
+							</div>
+							<div class="lyh-lb-C_R_2_1_7_4">
+								<div class="lyh-lb-C_R_2_1_7_4_L">
+									<div class="lyh-lb-C_R_2_1_7_4_R">收藏</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="lyh-lb-C_R_2_1">
+						<div class="lyh-lb-C_R_2_1_1_4"></div>
+						<p class="lyh-lb-C_R_2_1_2">金龙鱼盘锦大米10kg</p>
+						<p class="lyh-lb-C_R_2_1_3">东梁特供</p>
+						<p class="lyh-lb-C_R_2_1_4"><span class="lyh-lb-C_R_2_1_5">¥3,800</span> /袋 <span class="lyh-lb-C_R_2_1_6">¥52,00</span></p>
+						<div class="lyh-lb-C_R_2_1_7" class="clear">
+							<input type="text" class="lyh-lb-C_R_2_1_7_1" value="1">
+							<div class="lyh-lb-C_R_2_1_7_2">
+								<div class="lyh-lb-C_R_2_1_7_2_1"></div>
+								<div class="lyh-lb-C_R_2_1_7_2_2"></div>
+							</div>
+							<div class="lyh-lb-C_R_2_1_7_3">
+								<div class="lyh-lb-C_R_2_1_7_3_L">
+									<div class="lyh-lb-C_R_2_1_7_3_R">加入购物车</div>
+								</div>
+							</div>
+							<div class="lyh-lb-C_R_2_1_7_4">
+								<div class="lyh-lb-C_R_2_1_7_4_L">
+									<div class="lyh-lb-C_R_2_1_7_4_R">收藏</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="lyh-lb-C_R_2_1">
+						<div class="lyh-lb-C_R_2_1_1"></div>
+						<p class="lyh-lb-C_R_2_1_2">金龙鱼盘锦大米10kg</p>
+						<p class="lyh-lb-C_R_2_1_3">东梁特供</p>
+						<p class="lyh-lb-C_R_2_1_4"><span class="lyh-lb-C_R_2_1_5">¥3,800</span> /袋 <span class="lyh-lb-C_R_2_1_6">¥52,00</span></p>
+						<div class="lyh-lb-C_R_2_1_7" class="clear">
+							<input type="text" class="lyh-lb-C_R_2_1_7_1" value="1">
+							<div class="lyh-lb-C_R_2_1_7_2">
+								<div class="lyh-lb-C_R_2_1_7_2_1"></div>
+								<div class="lyh-lb-C_R_2_1_7_2_2"></div>
+							</div>
+							<div class="lyh-lb-C_R_2_1_7_3">
+								<div class="lyh-lb-C_R_2_1_7_3_L">
+									<div class="lyh-lb-C_R_2_1_7_3_R">加入购物车</div>
+								</div>
+							</div>
+							<div class="lyh-lb-C_R_2_1_7_4">
+								<div class="lyh-lb-C_R_2_1_7_4_L">
+									<div class="lyh-lb-C_R_2_1_7_4_R">收藏</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="lyh-lb-C_R_2_1">
+						<div class="lyh-lb-C_R_2_1_1_2"></div>
+						<p class="lyh-lb-C_R_2_1_2">金龙鱼盘锦大米10kg</p>
+						<p class="lyh-lb-C_R_2_1_3">东梁特供</p>
+						<p class="lyh-lb-C_R_2_1_4"><span class="lyh-lb-C_R_2_1_5">¥3,800</span> /袋 <span class="lyh-lb-C_R_2_1_6">¥52,00</span></p>
+						<div class="lyh-lb-C_R_2_1_7" class="clear">
+							<input type="text" class="lyh-lb-C_R_2_1_7_1" value="1">
+							<div class="lyh-lb-C_R_2_1_7_2">
+								<div class="lyh-lb-C_R_2_1_7_2_1"></div>
+								<div class="lyh-lb-C_R_2_1_7_2_2"></div>
+							</div>
+							<div class="lyh-lb-C_R_2_1_7_3">
+								<div class="lyh-lb-C_R_2_1_7_3_L">
+									<div class="lyh-lb-C_R_2_1_7_3_R">加入购物车</div>
+								</div>
+							</div>
+							<div class="lyh-lb-C_R_2_1_7_4">
+								<div class="lyh-lb-C_R_2_1_7_4_L">
+									<div class="lyh-lb-C_R_2_1_7_4_R">收藏</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="lyh-lb-C_R_2_1">
+						<div class="lyh-lb-C_R_2_1_1_3"></div>
+						<p class="lyh-lb-C_R_2_1_2">金龙鱼盘锦大米10kg</p>
+						<p class="lyh-lb-C_R_2_1_3">东梁特供</p>
+						<p class="lyh-lb-C_R_2_1_4"><span class="lyh-lb-C_R_2_1_5">¥3,800</span> /袋 <span class="lyh-lb-C_R_2_1_6">¥52,00</span></p>
+						<div class="lyh-lb-C_R_2_1_7" class="clear">
+							<input type="text" class="lyh-lb-C_R_2_1_7_1" value="1">
+							<div class="lyh-lb-C_R_2_1_7_2">
+								<div class="lyh-lb-C_R_2_1_7_2_1"></div>
+								<div class="lyh-lb-C_R_2_1_7_2_2"></div>
+							</div>
+							<div class="lyh-lb-C_R_2_1_7_3">
+								<div class="lyh-lb-C_R_2_1_7_3_L">
+									<div class="lyh-lb-C_R_2_1_7_3_R">加入购物车</div>
+								</div>
+							</div>
+							<div class="lyh-lb-C_R_2_1_7_4">
+								<div class="lyh-lb-C_R_2_1_7_4_L">
+									<div class="lyh-lb-C_R_2_1_7_4_R">收藏</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="lyh-lb-C_R_2_1">
+						<div class="lyh-lb-C_R_2_1_1_4"></div>
+						<p class="lyh-lb-C_R_2_1_2">金龙鱼盘锦大米10kg</p>
+						<p class="lyh-lb-C_R_2_1_3">东梁特供</p>
+						<p class="lyh-lb-C_R_2_1_4"><span class="lyh-lb-C_R_2_1_5">¥3,800</span> /袋 <span class="lyh-lb-C_R_2_1_6">¥52,00</span></p>
+						<div class="lyh-lb-C_R_2_1_7" class="clear">
+							<input type="text" class="lyh-lb-C_R_2_1_7_1" value="1">
+							<div class="lyh-lb-C_R_2_1_7_2">
+								<div class="lyh-lb-C_R_2_1_7_2_1"></div>
+								<div class="lyh-lb-C_R_2_1_7_2_2"></div>
+							</div>
+							<div class="lyh-lb-C_R_2_1_7_3">
+								<div class="lyh-lb-C_R_2_1_7_3_L">
+									<div class="lyh-lb-C_R_2_1_7_3_R">加入购物车</div>
+								</div>
+							</div>
+							<div class="lyh-lb-C_R_2_1_7_4">
+								<div class="lyh-lb-C_R_2_1_7_4_L">
+									<div class="lyh-lb-C_R_2_1_7_4_R">收藏</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="lyh-lb-C_R_2_1">
+						<div class="lyh-lb-C_R_2_1_1"></div>
+						<p class="lyh-lb-C_R_2_1_2">金龙鱼盘锦大米10kg</p>
+						<p class="lyh-lb-C_R_2_1_3">东梁特供</p>
+						<p class="lyh-lb-C_R_2_1_4"><span class="lyh-lb-C_R_2_1_5">¥3,800</span> /袋 <span class="lyh-lb-C_R_2_1_6">¥52,00</span></p>
+						<div class="lyh-lb-C_R_2_1_7" class="clear">
+							<input type="text" class="lyh-lb-C_R_2_1_7_1" value="1">
+							<div class="lyh-lb-C_R_2_1_7_2">
+								<div class="lyh-lb-C_R_2_1_7_2_1"></div>
+								<div class="lyh-lb-C_R_2_1_7_2_2"></div>
+							</div>
+							<div class="lyh-lb-C_R_2_1_7_3">
+								<div class="lyh-lb-C_R_2_1_7_3_L">
+									<div class="lyh-lb-C_R_2_1_7_3_R">加入购物车</div>
+								</div>
+							</div>
+							<div class="lyh-lb-C_R_2_1_7_4">
+								<div class="lyh-lb-C_R_2_1_7_4_L">
+									<div class="lyh-lb-C_R_2_1_7_4_R">收藏</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="lyh-lb-C_R_2_1">
+						<div class="lyh-lb-C_R_2_1_1_2"></div>
+						<p class="lyh-lb-C_R_2_1_2">金龙鱼盘锦大米10kg</p>
+						<p class="lyh-lb-C_R_2_1_3">东梁特供</p>
+						<p class="lyh-lb-C_R_2_1_4"><span class="lyh-lb-C_R_2_1_5">¥3,800</span> /袋 <span class="lyh-lb-C_R_2_1_6">¥52,00</span></p>
+						<div class="lyh-lb-C_R_2_1_7" class="clear">
+							<input type="text" class="lyh-lb-C_R_2_1_7_1" value="1">
+							<div class="lyh-lb-C_R_2_1_7_2">
+								<div class="lyh-lb-C_R_2_1_7_2_1"></div>
+								<div class="lyh-lb-C_R_2_1_7_2_2"></div>
+							</div>
+							<div class="lyh-lb-C_R_2_1_7_3">
+								<div class="lyh-lb-C_R_2_1_7_3_L">
+									<div class="lyh-lb-C_R_2_1_7_3_R">加入购物车</div>
+								</div>
+							</div>
+							<div class="lyh-lb-C_R_2_1_7_4">
+								<div class="lyh-lb-C_R_2_1_7_4_L">
+									<div class="lyh-lb-C_R_2_1_7_4_R">收藏</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="lyh-lb-C_R_2_1">
+						<div class="lyh-lb-C_R_2_1_1_3"></div>
+						<p class="lyh-lb-C_R_2_1_2">金龙鱼盘锦大米10kg</p>
+						<p class="lyh-lb-C_R_2_1_3">东梁特供</p>
+						<p class="lyh-lb-C_R_2_1_4"><span class="lyh-lb-C_R_2_1_5">¥3,800</span> /袋 <span class="lyh-lb-C_R_2_1_6">¥52,00</span></p>
+						<div class="lyh-lb-C_R_2_1_7" class="clear">
+							<input type="text" class="lyh-lb-C_R_2_1_7_1" value="1">
+							<div class="lyh-lb-C_R_2_1_7_2">
+								<div class="lyh-lb-C_R_2_1_7_2_1"></div>
+								<div class="lyh-lb-C_R_2_1_7_2_2"></div>
+							</div>
+							<div class="lyh-lb-C_R_2_1_7_3">
+								<div class="lyh-lb-C_R_2_1_7_3_L">
+									<div class="lyh-lb-C_R_2_1_7_3_R">加入购物车</div>
+								</div>
+							</div>
+							<div class="lyh-lb-C_R_2_1_7_4">
+								<div class="lyh-lb-C_R_2_1_7_4_L">
+									<div class="lyh-lb-C_R_2_1_7_4_R">收藏</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="lyh-lb-C_R_2_1">
+						<div class="lyh-lb-C_R_2_1_1_4"></div>
+						<p class="lyh-lb-C_R_2_1_2">金龙鱼盘锦大米10kg</p>
+						<p class="lyh-lb-C_R_2_1_3">东梁特供</p>
+						<p class="lyh-lb-C_R_2_1_4"><span class="lyh-lb-C_R_2_1_5">¥3,800</span> /袋 <span class="lyh-lb-C_R_2_1_6">¥52,00</span></p>
+						<div class="lyh-lb-C_R_2_1_7" class="clear">
+							<input type="text" class="lyh-lb-C_R_2_1_7_1" value="1">
+							<div class="lyh-lb-C_R_2_1_7_2">
+								<div class="lyh-lb-C_R_2_1_7_2_1"></div>
+								<div class="lyh-lb-C_R_2_1_7_2_2"></div>
+							</div>
+							<div class="lyh-lb-C_R_2_1_7_3">
+								<div class="lyh-lb-C_R_2_1_7_3_L">
+									<div class="lyh-lb-C_R_2_1_7_3_R">加入购物车</div>
+								</div>
+							</div>
+							<div class="lyh-lb-C_R_2_1_7_4">
+								<div class="lyh-lb-C_R_2_1_7_4_L">
+									<div class="lyh-lb-C_R_2_1_7_4_R">收藏</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<p class="lyh-lb-C_R_3">
+				<span class="lyh-lb-C_R_3_1">首页</span>
+				<span class="lyh-lb-C_R_3_2"></span>
+				<span>1</span>
+				<span>2</span>
+				<span>3</span>
+				<span>4</span>
+				<span>5</span>
+				<span>6</span>
+				<span>7</span>
+				<span>8</span>
+				<span>9</span>
+				<span>10</span>
+				<span class="lyh-lb-C_R_3_3"></span>
+				<span class="lyh-lb-C_R_3_4">2/2938</span>
+				</p>
+			</div>
+		</div>
+	</div>
+	<div class="xst-foot">
+	  <div class="clear">
+		<dl>
+			<dd><i class="i1"></i>帮助中心</dd>
+			<dt>新手上路</dt>
+			<dt>常见问题</dt>
+			<dt>服务保障计划</dt>
+			<dt>意见与建议</dt>
+		</dl>
+		<dl>
+			<dd><i class="i2"></i>商务合作</dd>
+			<dt>商户入驻</dt>
+			<dt>合作案例</dt>
+			<dt>友情链接</dt>
+			<dt>商家中心</dt>
+			<dt>商家须知</dt>
+			<dt class="hr"></dt>
+		</dl>
+		<dl>
+			<dd><i class="i3"></i>公司信息</dd>
+			<dt>关于我们</dt>
+			<dt>诚聘英才</dt>
+			<dt>联系我们</dt>
+			<dt>法律声明</dt>
+			<dt class="hr"></dt>
+		</dl>
+		<dl>
+			<dd><i class="i4"></i>配送信息</dd>
+			<dt>配送运费信息</dt>
+			<dt>订单处理时间</dt>
+			<dt>自提说明</dt>
+			<dt>验货与拒收政策</dt>
+			<dt>用券订单结算说明</dt>
+			<dt class="hr"></dt>
+		</dl>
+		<dl>
+			<dd><i class="i5"></i>关注我们</dd>
+			<dt><i class="i7"></i>新浪微博</dt>
+			<dt><i class="i8"></i>腾讯微博</dt>
+			<dt class="hr"></dt>
+		</dl>
+		<dl>
+			<dd><i class="i6"></i>客服热线<span>（免长途费）</span></dd>
+			<dt><span>400-400-0000</span><p>（09:00-19:00）</p></dt>
+			<dt class="hr"></dt>
+		</dl>
+	  </div>
+	    <span><br><p>北京总部地址：北京市朝阳区小关北里渔阳置业大厦A510 电话：010-88888888 010-99999999</p><br><p>版权所有 © 网站法律所有权归北京科码先锋软件技术有限公司所有</p><br><p>友情链接：<span class="red">中国互联网服务中心</span> | <span class="red">中国商业联合会 </span>| <span class="red">中国百货商业联合会 </span>| <span class="red">中国商业协会</span></p></span>
+	    <span><br><img src="../images/cx.png" height="43" width="470" alt=""></span>
+	</div>
+	<div class="lyh_div" id="lyh_div"><iframe class="lyh_if" src="加入购物车（列表页）.html" frameborder="0"></iframe></div>
+	<script>
+		var lyh_btn = document.getElementsByClassName("lyh-lb-C_R_2_1_7_3_R");
+		var lyh_div = document.getElementById("lyh_div");
+		var body = document.getElementById("body");
+		for(var i = 0;i<lyh_btn.length;i++){
+			lyh_btn[i].onclick = function(){
+				lyh_div.style.display="block"
+				body.style.overflow="hidden";
+			}
+		}
+		function logzt(){
+			window.location="商品详情.html"
+		}
+	</script>
+    
+	
+</body>
+</html>

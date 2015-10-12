@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="../../css/win.css">
+	<style>
+		.sydshut{
+			width: 20px;
+			height: 20px;
+			background:rgba(100,100,100,0.5);
+			color: #fff;
+			position: absolute;
+			left: 561px;
+			top:5px;
+			line-height: 20px;
+			text-align: center;
+			border-radius: 50%;
+			cursor: pointer;
+		}
+		.syd_f{
+			position: relative;
+		}
+	</style>
+</head>
+<body style="overflow:hidden;">
+	<div class="syd_f" >
+		<div class="syd_f1"><p>添加收货地址</p><div class="sydshut" id="sydshut">X</div></div>
+		<div class="syd_f2">
+			<span class="syd_f21">*</span><span>收货人:</span>
+			<input type="textarea">
+		</div>
+		<div class="syd_f3">
+			<span class="syd_f31">*</span><span>所在地区:</span>
+			<select name="" id="">
+				<option value="">请选择</option>
+			</select>
+		</div>
+		<div class="syd_f2 f4">
+			<span class="syd_f21">*</span><span>详细地址:</span>
+			<input type="textarea" class="f41">
+		</div>
+		<div class="syd_f5 clear">
+			<div class="syd_f51">
+				<span class="syd_f511">*</span><span>手机号码:</span>
+				<input type="textarea">
+			</div>
+			<p class="syd_f52">或</p>
+			<div class="syd_f53">
+				<span class="syd_f511">*</span><span>固定号码:</span>
+				<input type="textarea">
+			</div>
+		</div>
+		<div class="syd_f2">
+			<span class="syd_f21">*</span><span>邮箱:</span>
+			<input type="textarea" class="f41">
+		</div>
+		<div class="syd_f6">
+			<input type="button" value="保存收货地址">
+		</div>
+	</div>
+	<script>
+		var  oSydshut = document.getElementById("sydshut");
+		var oSydAddShut = window.parent.document.getElementById("syd_ef");
+		oSydshut.onclick = function(){
+			oSydAddShut.style.display="none";
+		}
+	</script>
+</body>
+</html>

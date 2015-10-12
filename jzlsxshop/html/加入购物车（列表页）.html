@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="../css/win.css">
+</head>
+<body style="overflow:hidden;">
+	<div class="jb_join_cart">
+		<div class="jb_join_carta">
+			<button class="jb_join_cartb" id="jb_shut">×</button>
+			<div class="jb_join_cartc">
+				<p>此商品已经成功放进购物车</p>
+				<p>购物车共<span class='jb_join_cartf'> 1 </span>件宝贝</p>
+				<p>合计金额：<span class='jb_join_cartf'>10.02</span></p>
+			</div>
+			<a href="商品详情页.html"target="_parent"><button class="jb_join_cartd">继续购物</button></a>
+			<a href="购物车.html"target="_parent"><button class="jb_join_carte">去购物车结算</button></a>	
+		</div>
+	</div>
+	<script>
+	var jb_shut = document.getElementById("jb_shut");
+	var parentDiv = window.parent.document.getElementById("lyh_div");
+	jb_shut.onclick = function(){
+		parentDiv.style.display="none";
+		window.parent.document.getElementById("body").style.overflow="auto";
+	}
+	</script>
+</body>
+</html>		
